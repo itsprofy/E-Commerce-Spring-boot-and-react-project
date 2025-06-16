@@ -1,0 +1,9 @@
+# Query: .env.production
+# ContextLines: 1
+
+1 result - 1 file
+
+frontend\update-api-urls.js:
+  63    console.log('REACT_APP_API_URL=http://localhost:8081/api');
+  64:   console.log('\nAnd a .env.production file with your production API URL:');
+  65    console.log('REACT_APP_API_URL=https://e-commerce-qlig.onrender.com');

@@ -1,0 +1,28 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Default deny all
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+    
+    // Product images - can be read by anyone, but only uploaded by admins
+    match /products/{productId}/{imageFile} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+        firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // User profile images - can be read by anyone, but only uploaded by the user
+    match /users/{userId}/{imageFile} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Order receipt uploads - can only be accessed by the order owner
+    match /orders/{orderId}/{fileId} {
+      allow read, write: if request.auth != null && 
+        firestore.get(/databases/(default)/documents/orders/$(orderId)).data.userId == request.auth.uid;
+    }
+  }
+} 
