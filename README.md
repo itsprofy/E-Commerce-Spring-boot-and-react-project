@@ -175,7 +175,7 @@ Replace `<your-username>` with your GitHub username. If authentication is requir
 
 Home page (rendered from the built React app):
 
-![Home page screenshot](<img width="903" height="929" alt="home" src="https://github.com/user-attachments/assets/2fad34a5-5b94-473a-aef0-16277435dc0f" />)
+<img width="903" height="929" alt="home" src="https://github.com/user-attachments/assets/2fad34a5-5b94-473a-aef0-16277435dc0f" />
 
 
 
