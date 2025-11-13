@@ -175,12 +175,9 @@ Replace `<your-username>` with your GitHub username. If authentication is requir
 
 Home page (rendered from the built React app):
 
-![Home page screenshot](assets/screenshots/home.png)
+![Home page screenshot](<img width="903" height="929" alt="home" src="https://github.com/user-attachments/assets/2fad34a5-5b94-473a-aef0-16277435dc0f" />)
 
 
-If you'd like, I can:
 
-- Initialize a local git repo and run the push commands for you (I will need confirmation to run terminal commands here), or
-- Generate a GitHub repo via the GitHub CLI if you're authenticated and want me to run it.
-
-Tell me which action you prefer and I will proceed.
+Product screenshot:
+<img width="888" height="923" alt="product" src="https://github.com/user-attachments/assets/8393d7d4-5abc-4de6-9f23-dea796947deb" />
